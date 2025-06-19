@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas - Ropik Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="media/favicon.png">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="media/lgo.png" alt="Logo Ropik Store" class="logo-img">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="ofertas.html" class="active">Ofertas</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="quienesSomos.html">Quienes somos</a>
+        </div>
+        <div class="nav-actions">
+            <button class="btn-login">Iniciar Sesión / Registrarse</button>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Ofertas -->
+    <section id="ofertas" class="ofertas">
+        <h2>Ofertas Especiales</h2>
+        
+        <!-- Banner de oferta principal -->
+        <div class="oferta-banner">
+            <h3>¡Gran Liquidación!</h3>
+            <p>Hasta 50% de descuento en productos seleccionados</p>
+            <div class="tiempo-restante">
+                <span>Termina en:</span>
+                <div class="countdown" id="countdown-principal">
+                    <div class="countdown-item">
+                        <span class="dias">00</span>
+                        <span class="label">Días</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="horas">00</span>
+                        <span class="label">Horas</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="minutos">00</span>
+                        <span class="label">Min</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="segundos">00</span>
+                        <span class="label">Seg</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid de productos en oferta -->
+        <div class="productos-grid">
+            <!-- Producto 1 -->
+            <div class="producto-card oferta" data-categoria="dama" data-prenda="vestido">
+                <div class="producto-badge">Dama</div>
+                <div class="descuento-badge">-30%</div>
+                <img src="media/item5.jpg" alt="Vestido" style="width: 100px; height: 100px; object-fit: cover;">
+                <h3>Vestido</h3>
+                <div class="precio-container">
+                    <p class="precio-original">$39.999</p>
+                    <p class="precio">$27.999</p>
+                </div>
+                <div class="tiempo-restante-producto">
+                    <small>Termina en: <span class="countdown-producto" data-end="2025-06-25">2 días</span></small>
+                </div>
+                <button class="btn-agregar">Agregar al Carrito</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="producto-card oferta" data-categoria="hombre" data-prenda="camisa">
+                <div class="producto-badge">Hombre</div>
+                <div class="descuento-badge">-25%</div>
+                <img src="media/item4.jpg" alt="Camisa" style="width: 100px; height: 100px; object-fit: cover;">
+                <h3>Camisa</h3>
+                <div class="precio-container">
+                    <p class="precio-original">$24.999</p>
+                    <p class="precio">$18.749</p>
+                </div>
+                <div class="tiempo-restante-producto">
+                    <small>Termina en: <span class="countdown-producto" data-end="2025-06-24">1 día</span></small>
+                </div>
+                <button class="btn-agregar">Agregar al Carrito</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="producto-card oferta" data-categoria="ninas" data-prenda="vestido">
+                <div class="producto-badge">Niñas</div>
+                <div class="descuento-badge">-40%</div>
+                <img src="media/item3.jpg" alt="Vestido" style="width: 100px; height: 100px; object-fit: cover;">
+                <h3>Vestido</h3>
+                <div class="precio-container">
+                    <p class="precio-original">$44.999</p>
+                    <p class="precio">$26.999</p>
+                </div>
+                <div class="tiempo-restante-producto">
+                    <small>Termina en: <span class="countdown-producto" data-end="2025-06-26">3 días</span></small>
+                </div>
+                <button class="btn-agregar">Agregar al Carrito</button>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="producto-card oferta" data-categoria="ninos" data-prenda="pantalon">
+                <div class="producto-badge">Niños</div>
+                <div class="descuento-badge">-35%</div>
+                <img src="media/item6.jpg" alt="Pantalón" style="width: 100px; height: 100px; object-fit: cover;">
+                <h3>Pantalón</h3>
+                <div class="precio-container">
+                    <p class="precio-original">$15.999</p>
+                    <p class="precio">$10.399</p>
+                </div>
+                <div class="tiempo-restante-producto">
+                    <small>Termina en: <span class="countdown-producto" data-end="2024-03-23">12 horas</span></small>
+                </div>
+                <button class="btn-agregar">Agregar al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito de Compras -->
+    <div class="carrito-sidebar">
+        <h3>Carrito de Compras</h3>
+        <div class="carrito-items">
+            <!-- Los items se agregarán dinámicamente con JavaScript -->
+        </div>
+        <div class="carrito-total">
+            <p>Total: $<span id="total">0.000</span></p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sobre Nosotros</h4>
+                <p>Tu tienda de confianza para compras online</p>
+            </div>
+            <div class="footer-section">
+                <ul class="footer-links">
+                    <li>Quienes somos</li>
+                    <li>Política de privacidad</li>
+                    <li>Términos y condiciones</li>
+                    <li>Política de devoluciones</li>
+                    <li>Política de envío</li>
+                    <li>Política de cookies</li>
+                    <li>Política de protección de datos</li>
+                </ul>
+                <p>Somos una empresa dedicada a la venta de ropa y accesorios para hombres y mujeres. Ofrecemos una amplia gama de productos de alta calidad a precios accesibles.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Email: info@ropikstore.com</p>
+                <p>Teléfono: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Login/Registro -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="auth-container">
+                <!-- Formulario de Login -->
+                <div id="login-form" class="auth-form active">
+                    <h2>Iniciar Sesión</h2>
+                    <form id="form-login">
+                        <div class="form-grupo">
+                            <label for="login-email">Email:</label>
+                            <input type="email" id="login-email" name="email" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="login-password">Contraseña:</label>
+                            <input type="password" id="login-password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn-enviar">Iniciar Sesión</button>
+                    </form>
+                    <p class="auth-switch">
+                        ¿No tienes cuenta? <a href="#" id="switch-to-register">Regístrate aquí</a>
+                    </p>
+                </div>
+
+                <!-- Formulario de Registro -->
+                <div id="register-form" class="auth-form">
+                    <h2>Crear Cuenta</h2>
+                    <form id="form-register">
+                        <div class="form-grupo">
+                            <label for="register-nombre">Nombre completo:</label>
+                            <input type="text" id="register-nombre" name="nombre" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="register-email">Email:</label>
+                            <input type="email" id="register-email" name="email" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="register-telefono">Teléfono:</label>
+                            <input type="tel" id="register-telefono" name="telefono" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="register-password">Contraseña:</label>
+                            <input type="password" id="register-password" name="password" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="register-confirm-password">Confirmar contraseña:</label>
+                            <input type="password" id="register-confirm-password" name="confirm-password" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                Acepto los <a href="#" class="terms-link">términos y condiciones</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-enviar">Crear Cuenta</button>
+                    </form>
+                    <p class="auth-switch">
+                        ¿Ya tienes cuenta? <a href="#" id="switch-to-login">Inicia sesión aquí</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

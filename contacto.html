@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Ropik Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="media/favicon.png">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="media/lgo.png" alt="Logo Ropik Store" class="logo-img">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="ofertas.html">Ofertas</a>
+            <a href="contacto.html" class="active">Contacto</a>
+            <a href="quienesSomos.html">Quienes somos</a>
+        </div>
+        <div class="nav-actions">
+            <button class="btn-login">Iniciar Sesión / Registrarse</button>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contáctanos</h2>
+        
+        <div class="contacto-container">
+            <!-- Información de Contacto -->
+            <div class="contacto-info">
+                <h3>Información de Contacto</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Dirección</h4>
+                        <p>Calle 10a cr 8 n#66<br>Sincelejo, Colombia</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Teléfono</h4>
+                        <p>+57 300 1234 5678</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@ropikstore.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Horario de Atención</h4>
+                        <p>Lunes a Viernes: 9:00 - 18:00<br>
+                           Sábados: 10:00 - 14:00</p>
+                    </div>
+                </div>
+                <div class="redes-sociales">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario de Contacto -->
+            <div class="contacto-formulario">
+                <h3>Envíanos un Mensaje</h3>
+                <form id="formulario-contacto">
+                    <div class="form-grupo">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    <div class="form-grupo">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="">Seleccione un asunto</option>
+                            <option value="consulta">Consulta General</option>
+                            <option value="soporte">Soporte Técnico</option>
+                            <option value="devolucion">Devolución</option>
+                            <option value="sugerencia">Sugerencia</option>
+                        </select>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Mapa -->
+        <div class="mapa-container">
+            <h3>Nuestra Ubicación</h3>
+            <div class="mapa">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.1234567890123!2d-70.12345678901234!3d-33.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDA3JzI0LjQiUyA3MMKwMDcnMjQuNCJX!5e0!3m2!1ses!2scl!4v1234567890123!5m2!1ses!2scl" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sobre Nosotros</h4>
+                <p>Tu tienda de confianza para compras online</p>
+            </div>
+            <div class="footer-section">
+                <ul class="footer-links">
+                    <li>Quienes somos</li>
+                    <li>Política de privacidad</li>
+                    <li>Términos y condiciones</li>
+                    <li>Política de devoluciones</li>
+                    <li>Política de envío</li>
+                    <li>Política de cookies</li>
+                    <li>Política de protección de datos</li>
+                </ul>
+                <p>Somos una empresa dedicada a la venta de ropa y accesorios para hombres y mujeres. Ofrecemos una amplia gama de productos de alta calidad a precios accesibles.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Email: info@ropikstore.com</p>
+                <p>Teléfono: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Login/Registro -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="auth-container">
+                <!-- Formulario de Login -->
+                <div id="login-form" class="auth-form active">
+                    <h2>Iniciar Sesión</h2>
+                    <form id="form-login">
+                        <div class="form-grupo">
+                            <label for="login-email">Email:</label>
+                            <input type="email" id="login-email" name="email" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="login-password">Contraseña:</label>
+                            <input type="password" id="login-password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn-enviar">Iniciar Sesión</button>
+                    </form>
+                    <p class="auth-switch">
+                        ¿No tienes cuenta? <a href="#" id="switch-to-register">Regístrate aquí</a>
+                    </p>
+                </div>
+
+                <!-- Formulario de Registro -->
+                <div id="register-form" class="auth-form">
+                    <h2>Crear Cuenta</h2>
+                    <form id="form-register">
+                        <div class="form-grupo">
+                            <label for="register-nombre">Nombre completo:</label>
+                            <input type="text" id="register-nombre" name="nombre" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="register-email">Email:</label>
+                            <input type="email" id="register-email" name="email" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="register-telefono">Teléfono:</label>
+                            <input type="tel" id="register-telefono" name="telefono" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="register-password">Contraseña:</label>
+                            <input type="password" id="register-password" name="password" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="register-confirm-password">Confirmar contraseña:</label>
+                            <input type="password" id="register-confirm-password" name="confirm-password" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                Acepto los <a href="#" class="terms-link">términos y condiciones</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-enviar">Crear Cuenta</button>
+                    </form>
+                    <p class="auth-switch">
+                        ¿Ya tienes cuenta? <a href="#" id="switch-to-login">Inicia sesión aquí</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

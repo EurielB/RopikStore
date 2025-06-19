@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ropik Store</title>
+    <link rel="icon" type="image/png" href="media/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="media/lgo.png" alt="Logo Ropik Store" class="logo-img">
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="ofertas.html">Ofertas</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="quienesSomos.html">Quienes somos</a>
+        </div>
+        <div class="nav-actions">
+            <button class="btn-login">Iniciar Sesión / Registrarse</button>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h2>Bienvenido a Ropik Store</h2>
+        <p>Descubre los mejores productos al mejor precio</p>
+        <!--<a href="productos.html" class="btn-cta">Ver Productos</a>-->
+    </header>
+
+    <!-- Sección de Productos Destacados -->
+    <section id="productos" class="productos">
+        <h2>Productos Destacados</h2>
+        <div class="productos-grid">
+            <!-- Producto 1 -->
+            <div class="producto-card">
+                <img src="media/item1.jpg" alt="Blusa" style="width: 100px; height: 100px; object-fit: cover;">
+                <h3>Blusa</h3>
+                <p class="precio">$19.999</p>
+                <button class="btn-agregar">Agregar al Carrito</button>
+            </div>
+            <!-- Producto 2 -->
+            <div class="producto-card">
+                <img src="media/item2.jpg" alt="Pantalón" style="width: 100px; height: 100px; object-fit: cover;">
+                <h3>Pantalón</h3>
+                <p class="precio">$29.999</p>
+                <button class="btn-agregar">Agregar al Carrito</button>
+            </div>
+            <!-- Producto 3 -->
+            <div class="producto-card">
+                <img src="media/item3.jpg" alt="Vestido" style="width: 100px; height: 100px; object-fit: cover;">
+                <h3>Vestido</h3>
+                <p class="precio">$44.999</p>
+                <button class="btn-agregar">Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="ver-mas">
+            <a href="productos.html" class="btn-ver-mas">Ver todos los productos</a>
+        </div>
+    </section>
+
+    <!-- Carrito de Compras -->
+    <div class="carrito-sidebar">
+        <h3>Carrito de Compras</h3>
+        <div class="carrito-items">
+            <!-- Los items se agregarán dinámicamente con JavaScript -->
+        </div>
+        <div class="carrito-total">
+            <p>Total: $<span id="total">0.00</span></p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sobre Nosotros</h4>
+                
+                <p>Tu tienda de confianza para compras online</p>
+            </div>
+            <div class="footer-section">
+                <ul class="footer-links">
+                    <li>Quienes somos</li>
+                    <li>Política de privacidad</li>
+                    <li>Términos y condiciones</li>
+                    <li>Política de devoluciones</li>
+                    <li>Política de envío</li>
+                    <li>Política de cookies</li>
+                    <li>Política de protección de datos</li>
+                </ul>
+
+                <p>Somos una empresa dedicada a la venta de ropa y accesorios para hombres y mujeres.
+                    Ofrecemos una amplia gama de productos de alta calidad a precios accesibles.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Email: info@ropikstore.com</p>
+                <p>Teléfono: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+    
+    <!-- Modal de Login/Registro -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="auth-container">
+                <!-- Formulario de Login -->
+                <div id="login-form" class="auth-form active">
+                    <h2>Iniciar Sesión</h2>
+                    <form id="form-login">
+                        <div class="form-grupo">
+                            <label for="login-email">Email:</label>
+                            <input type="email" id="login-email" name="email" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="login-password">Contraseña:</label>
+                            <input type="password" id="login-password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn-enviar">Iniciar Sesión</button>
+                    </form>
+                    <p class="auth-switch">
+                        ¿No tienes cuenta? <a href="#" id="switch-to-register">Regístrate aquí</a>
+                    </p>
+                </div>
+
+                <!-- Formulario de Registro -->
+                <div id="register-form" class="auth-form">
+                    <h2>Crear Cuenta</h2>
+                    <form id="form-register">
+                        <div class="form-grupo">
+                            <label for="register-nombre">Nombre completo:</label>
+                            <input type="text" id="register-nombre" name="nombre" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="register-email">Email:</label>
+                            <input type="email" id="register-email" name="email" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="register-telefono">Teléfono:</label>
+                            <input type="tel" id="register-telefono" name="telefono" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="register-password">Contraseña:</label>
+                            <input type="password" id="register-password" name="password" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="register-confirm-password">Confirmar contraseña:</label>
+                            <input type="password" id="register-confirm-password" name="confirm-password" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                Acepto los <a href="#" class="terms-link">términos y condiciones</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-enviar">Crear Cuenta</button>
+                    </form>
+                    <p class="auth-switch">
+                        ¿Ya tienes cuenta? <a href="#" id="switch-to-login">Inicia sesión aquí</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
