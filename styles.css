@@ -179,10 +179,11 @@ body {
     top: 0;
     width: 300px;
     height: 100vh;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 2rem;
     box-shadow: -2px 0 5px rgba(0,0,0,0.1);
     transition: right 0.3s;
+    z-index: 1;
 }
 
 .carrito-sidebar.active {
@@ -1043,5 +1044,20 @@ footer {
     }
     .logo {
         margin-left: 1rem;
+    }
+    .btn-login {
+        width: 100%;
+        display: block;
+        padding: 0.5rem 0.5rem;
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-login {
+        font-size: 0.95rem;
+        padding: 0.45rem 0.3rem;
     }
 } 
