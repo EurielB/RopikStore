@@ -12,7 +12,9 @@
     <!-- Barra de navegación -->
     <nav class="navbar">
         <div class="logo">
-            <img src="media/lgo.png" alt="Logo Ropik Store" class="logo-img">
+            <a href="index.html">
+                <img src="media/lgo.png" alt="Logo Ropik Store" class="logo-img">
+            </a>
         </div>
         <div class="nav-links">
             <a href="index.html" class="active">Inicio</a>
@@ -179,6 +181,42 @@
                         ¿Ya tienes cuenta? <a href="#" id="switch-to-login">Inicia sesión aquí</a>
                     </p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-pago" class="modal">
+        <div class="modal-content">
+            <span class="close close-pago">&times;</span>
+            <div class="auth-container">
+                <h2>Formulario de Pago</h2>
+                <form id="form-pago">
+                    <div class="form-grupo">
+                        <label for="pago-nombre">Nombre completo:</label>
+                        <input type="text" id="pago-nombre" name="nombre" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="pago-email">Email:</label>
+                        <input type="email" id="pago-email" name="email" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="pago-direccion">Dirección:</label>
+                        <input type="text" id="pago-direccion" name="direccion" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="pago-tarjeta">Número de tarjeta:</label>
+                        <input type="text" id="pago-tarjeta" name="tarjeta" maxlength="19" required placeholder="0000 0000 0000 0000">
+                    </div>
+                    <div class="form-grupo">
+                        <label for="pago-expira">Fecha de expiración:</label>
+                        <input type="text" id="pago-expira" name="expira" maxlength="5" required placeholder="MM/AA">
+                    </div>
+                    <div class="form-grupo">
+                        <label for="pago-cvv">CVV:</label>
+                        <input type="text" id="pago-cvv" name="cvv" maxlength="4" required placeholder="123">
+                    </div>
+                    <button type="submit" class="btn-enviar">Pagar</button>
+                </form>
             </div>
         </div>
     </div>

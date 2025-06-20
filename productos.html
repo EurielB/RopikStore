@@ -12,7 +12,9 @@
     <!-- Barra de navegación -->
     <nav class="navbar">
         <div class="logo">
+            <a href="index.html">
             <img src="media/lgo.png" alt="Logo Ropik Store" class="logo-img">
+            </a>
         </div>
         <div class="nav-links">
             <a href="index.html">Inicio</a>
@@ -68,8 +70,8 @@
                 <button class="btn-agregar">Agregar al Carrito</button>
             </div>
             <!-- Producto 2 -->
-            <div class="producto-card" data-categoria="hombre" data-prenda="pantalon">
-                <div class="producto-badge">Hombre</div>
+            <div class="producto-card" data-categoria="dama" data-prenda="pantalon">
+                <div class="producto-badge">Dama</div>
                 <img src="media/item2.jpg" alt="Pantalón" style="width: 100px; height: 100px; object-fit: cover;">
                 <h3>Pantalón</h3>
                 <p class="precio">$29.999</p>
@@ -77,7 +79,7 @@
             </div>
             <!-- Producto 3 -->
             <div class="producto-card" data-categoria="ninas" data-prenda="vestido">
-                <div class="producto-badge">Niñas</div>
+                <div class="producto-badge">Niña</div>
                 <img src="media/item3.jpg" alt="Vestido" style="width: 100px; height: 100px; object-fit: cover;">
                 <h3>Vestido</h3>
                 <p class="precio">$44.999</p>
@@ -88,39 +90,39 @@
                 <div class="producto-badge">Hombre</div>
                 <img src="media/item4.jpg" alt="Camisa" style="width: 100px; height: 100px; object-fit: cover;">
                 <h3>Camisa</h3>
-                <p class="precio">$24.999</p>
+                <p class="precio">$44.999</p>
                 <button class="btn-agregar">Agregar al Carrito</button>
             </div>
             <!-- Producto 5 -->
-            <div class="producto-card" data-categoria="dama" data-prenda="vestido">
-                <div class="producto-badge">Dama</div>
-                <img src="media/item5.jpg" alt="Vestido" style="width: 100px; height: 100px; object-fit: cover;">
-                <h3>Vestido</h3>
+            <div class="producto-card" data-categoria="ninas" data-prenda="vestido">
+                <div class="producto-badge">Niña</div>
+                <img src="media/item5.jpg" alt="falda" style="width: 100px; height: 100px; object-fit: cover;">
+                <h3>Falda</h3>
                 <p class="precio">$39.999</p>
                 <button class="btn-agregar">Agregar al Carrito</button>
             </div>
             <!-- Producto 6 -->
             <div class="producto-card" data-categoria="ninos" data-prenda="pantalon">
-                <div class="producto-badge">Niños</div>
-                <img src="media/item6.jpg" alt="Pantalón" style="width: 100px; height: 100px; object-fit: cover;">
-                <h3>Pantalón</h3>
-                <p class="precio">$15.999</p>
+                <div class="producto-badge">Niño</div>
+                <img src="media/item6.jpg" alt="buzo" style="width: 100px; height: 100px; object-fit: cover;">
+                <h3>buzo</h3>
+                <p class="precio">$55.999</p>
                 <button class="btn-agregar">Agregar al Carrito</button>
             </div>
             <!-- Producto 7 -->
-            <div class="producto-card" data-categoria="dama" data-prenda="pantalon">
-                <div class="producto-badge">Dama</div>
+            <div class="producto-card" data-categoria="ninos" data-prenda="pantalon">
+                <div class="producto-badge">Niño</div>
                 <img src="media/item7.jpg" alt="Pantalón" style="width: 100px; height: 100px; object-fit: cover;">
                 <h3>Pantalón</h3>
                 <p class="precio">$27.999</p>
                 <button class="btn-agregar">Agregar al Carrito</button>
             </div>
             <!-- Producto 8 -->
-            <div class="producto-card" data-categoria="ninas" data-prenda="pantalon">
-                <div class="producto-badge">Niñas</div>
+            <div class="producto-card" data-categoria="hombre" data-prenda="pantalon">
+                <div class="producto-badge">hombre</div>
                 <img src="media/item8.jpg" alt="Pantalón" style="width: 100px; height: 100px; object-fit: cover;">
                 <h3>Pantalón</h3>
-                <p class="precio">$17.999</p>
+                <p class="precio">$37.999</p>
                 <button class="btn-agregar">Agregar al Carrito</button>
             </div>
         </div>
@@ -233,6 +235,77 @@
                         ¿Ya tienes cuenta? <a href="#" id="switch-to-login">Inicia sesión aquí</a>
                     </p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-pago" class="modal">
+        <div class="modal-content">
+            <span class="close close-pago">&times;</span>
+            <div class="auth-container">
+                <h2>Finalizar compra</h2>
+                <form id="form-pago">
+                    <h3>Información de contacto</h3>
+                    <div class="form-grupo">
+                        <label for="pago-email">Correo electrónico</label>
+                        <input type="email" id="pago-email" name="email" required>
+                    </div>
+                    <h3>Dirección de facturación</h3>
+                    <div class="form-row">
+                        <div class="form-grupo">
+                            <label for="pago-pais">País</label>
+                            <select id="pago-pais" name="pais" required>
+                                <option value="Colombia">Colombia</option>
+                            </select>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="pago-nombre">Nombre</label>
+                            <input type="text" id="pago-nombre" name="nombre" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="pago-apellido">Apellido</label>
+                            <input type="text" id="pago-apellido" name="apellido" required>
+                        </div>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="pago-direccion">Dirección</label>
+                        <input type="text" id="pago-direccion" name="direccion" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-grupo">
+                            <label for="pago-ciudad">Ciudad</label>
+                            <input type="text" id="pago-ciudad" name="ciudad" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="pago-departamento">Departamento</label>
+                            <input type="text" id="pago-departamento" name="departamento" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-grupo">
+                            <label for="pago-cp">Código postal (opcional)</label>
+                            <input type="text" id="pago-cp" name="cp">
+                        </div>
+                        <div class="form-grupo">
+                            <label for="pago-telefono">Teléfono</label>
+                            <input type="tel" id="pago-telefono" name="telefono" required>
+                        </div>
+                    </div>
+                    <h3>Opciones de pago</h3>
+                    <div class="form-grupo" id="checkbox">
+                        <div class="opcion-pago"><input type="radio" name="pago-metodo" value="transferencia" required> <span>Transferencia bancaria directa</span></div>
+                        <div class="opcion-pago"><input type="radio" name="pago-metodo" value="pse"> <span>PSE (Pagos Seguros en Línea)</span></div>
+                        <div class="opcion-pago"><input type="radio" name="pago-metodo" value="tarjeta"> <span>Tarjeta de crédito/débito</span></div>
+                        <div class="opcion-pago"><input type="radio" name="pago-metodo" value="efecty"> <span>Efecty/Baloto</span></div>
+                    </div>
+                    <div class="form-grupo">
+                        <label><input type="checkbox" name="noticias"> Avisa sobre noticias y mi pedido</label>
+                    </div>
+                    <div class="form-grupo">
+                        <label><input type="checkbox" name="terminos" required> Al proceder con tu compra aceptas nuestros Términos y condiciones y Políticas de privacidad</label>
+                    </div>
+                    <button type="submit" class="btn-enviar">Finalizar el pedido</button>
+                </form>
             </div>
         </div>
     </div>

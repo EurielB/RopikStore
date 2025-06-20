@@ -786,7 +786,6 @@ footer {
     margin-bottom: 0.5rem;
     color: #333;
     font-weight: 500;
-    font-size: 0.9rem;
 }
 
 .auth-form .form-grupo input {
@@ -1060,4 +1059,114 @@ footer {
         font-size: 0.95rem;
         padding: 0.45rem 0.3rem;
     }
+}
+
+/* Estilos para el nuevo formulario de pago */
+#modal-pago .modal-content {
+    max-width: 1000px;
+    padding: 2rem 1.5rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#modal-pago h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+#modal-pago h3 {
+    font-size: 1.1rem;
+    margin: 1.2rem 0 0.5rem 0;
+    color: #333;
+}
+#modal-pago .form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+#modal-pago .form-row .form-grupo {
+    flex: 1 1 45%;
+    min-width: 120px;
+}
+#modal-pago .form-grupo {
+    margin-bottom: 0.7rem;
+    align-items: flex-start;
+    text-align: right;
+}
+#modal-pago .form-grupo label {
+    justify-content: flex-start;
+}
+#modal-pago label {
+    font-size: 0.97rem;
+    margin-bottom: 0.3rem;
+    color: #222;
+}
+#modal-pago input[type="text"],
+#modal-pago input[type="email"],
+#modal-pago input[type="tel"],
+#modal-pago select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+#modal-pago input[type="radio"],
+#modal-pago input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+#modal-pago .btn-enviar {
+    background: #b8005c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.9rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    margin-bottom: 0;
+}
+#modal-pago .btn-enviar:hover {
+    background: #8a0046;
+}
+@media (max-width: 600px) {
+    #modal-pago .modal-content {
+        padding: 1rem 0.5rem;
+        max-height: 95vh;
+    }
+    #modal-pago .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+#modal-pago .form-grupo label input[type="radio"] {
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+#modal-pago .form-grupo label {
+    margin-bottom: 0.2rem;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    gap: 0.5rem;
+}
+#modal-pago .opcion-pago {
+    display: flex;
+    align-content: 
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.5rem;
+    text-align: auto;
+}
+#modal-pago .opcion-pago input[type="radio"] {
+    margin: 0;
+    ;
 } 
